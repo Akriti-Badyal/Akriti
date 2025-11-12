@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        
+    }
+</style>
+<body>
+    <div></div>
+<script>
+    function updateTime(){
+    let ele = document.body.children[0];
+    t = new Date();
+    ele.innerText = t;
+    }
+    setInterval(updateTime, 1000)
+</script>    
+</body>
+
+</html>
