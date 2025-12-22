@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form action="time.html" method="post">
+        Email: <input type="text" name="email" id="email">
+        Password: <input type="password" name="pswd" id="pswd">
+        <button action="Submit" id="btn">Submit
+        </button>
+
+
+    </form>
+    <script>
+        setInterval(function () {
+            let f = document.querySelector("form")
+            f.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let email = document.getElementById("email");
+                if (!email.value.includes("@")) {
+                    
+                    email.style.textDecoration = "underline";
+                    email.style.color = "red";
+                }
+                
+                if (!email.value.includes(".com")) {
+                    
+                    email.style.textDecoration = "underline";
+                    email.style.color = "red";
+                }
+                
+                let pswd = document.getElementById("pswd");
+               
+                
+                if (!pswd.value.length !=6) {
+                    alert("Enter 6 digits password")                    
+                    
+                }
+
+
+            })
+        }, 1000)
+
+
+    </script>
+
+</body>
+
+</html>
